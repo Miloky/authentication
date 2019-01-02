@@ -1,0 +1,29 @@
+﻿@model IQueryable<AppUser>
+
+<header class="navbar"></header>
+<div class="bg-danger" asp-validation-summary="All"></div>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>UserName</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="placeholder"><td colspan="3">No data</td></tr>
+
+        @foreach (AppUser appUser in Model)
+        {
+            <tr>
+                <td>@appUser.Id</td>
+                <td>@appUser.UserName</td>
+                <td>@appUser.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a class="btn btn-primary" asp-action="Create">Create</a>

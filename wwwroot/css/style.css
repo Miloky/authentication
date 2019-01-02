@@ -1,0 +1,15 @@
+﻿.placeholder:only-child {
+    visibility: visible;
+    text-align: center;
+    display: table-row;
+}
+
+.placeholder {
+    visibility: hidden;
+    display: none;
+}
+
+.navbar {
+    min-height: 40px;
+    background-color: #313338;
+}
