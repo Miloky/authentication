@@ -8,6 +8,16 @@
     <link href="~/css/style.css" rel="stylesheet" />
 </head>
 <body>
+    <header class="navbar">
+        @if (User.Identity.IsAuthenticated)
+        {
+            <a asp-action="SignOut" asp-controller="Account">Sign Out</a>
+        }
+        else
+        {
+            <a asp-action="Login" asp-controller="Account">Login</a>
+        }
+    </header>
     <div class="container">
         @RenderBody()
     </div>

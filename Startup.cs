@@ -40,6 +40,8 @@ namespace authentication
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStatusCodePages();
+
             app.UseStaticFiles();
             app.UseAuthentication();
             app.UseMvcWithDefaultRoute();

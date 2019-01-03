@@ -9,4 +9,23 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Home\Simple.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Home\Admin.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\RoleAdmin\Edit.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\RoleAdmin\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
 </Project>

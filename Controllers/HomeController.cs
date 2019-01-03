@@ -11,5 +11,19 @@ namespace authentication.Controllers
         {
             return View();
         }
+
+        [Authorize(Roles = "simple")]
+        public IActionResult Simple()
+        {
+            ViewBag.Title = "Simple";
+            return View();
+        }
+
+        [Authorize(Roles = "admin")]
+        public IActionResult Admin()
+        {
+            ViewBag.Title = "Admin";
+            return View();
+        }
     }
 }

@@ -1,0 +1,28 @@
+﻿@model EditModel
+
+<div class="bg-info mb-5 p-3">@Model.RoleName</div>
+
+<div class="bg-primary">@Model.RoleName</div>
+
+<form asp-controller="RoleAdmin" asp-action="Edit">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th style="width: 15px"></th>
+                <th>Id</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (EditRoleUser user in Model.Users)
+        {
+            <tr>
+                <td><input type="checkbox" name="InRole"/></td>
+                <td>@user.Id</td>
+                <td>@user.Name</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    <input type="submit" class="btn btn-primary" asp-controller="RoleAdmin" asp-action="Edit">
+</form>
