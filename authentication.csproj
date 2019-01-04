@@ -20,6 +20,9 @@
     <Content Update="Views\Home\Admin.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
+    <Content Update="Views\Profile\_Profile.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Views\RoleAdmin\Edit.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
