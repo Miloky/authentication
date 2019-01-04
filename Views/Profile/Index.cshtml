@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Profile";
+    
+}
+
+@section Scripts{ 
+    <
+}
+<h2>Profile</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="well">Image</div>
+
+        <div class="nav flex-column nav-pills" id="profile-tablist" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="profile-tab" data-toggle="pill" href="#" role="tab" aria-controls="" aria-selected="true">Profile</a>
+            <div>Spacer</div>
+            <a class="nav-link" id="change-password-tab" data-toggle="pill" href="#" role="tab" aria-controls="" aria-selected="false">Change Password</a>
+            <a class="nav-link" id="change-email-tab" data-toggle="pill" href="#" role="tab" aria-controls="" aria-selected="false">Change Email</a>
+            <a class="nav-link" id="manage-authentication-tab" data-toggle="pill" href="#" role="tab" aria-controls="" aria-selected="false">Manage External Authentication</a>
+        </div>
+
+
+    </div>
+
+    <div class="col-md-8">
+        <div id="partial-view">
+            @{ await Html.RenderPartialAsync("_Profile"); }
+        </div>
+    </div>
+</div>
